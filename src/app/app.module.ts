@@ -13,7 +13,8 @@ import {ApiService} from './api.service';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
-
+import { ContatoComponent } from './contato/contato.component';
+import {MatIconModule} from '@angular/material/icon';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -22,7 +23,8 @@ const maskConfig: Partial<IConfig> = {
   declarations: [
     AppComponent,
     BuscarCEPComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ const maskConfig: Partial<IConfig> = {
     MatInputModule,
     NgxMaskModule.forRoot(maskConfig),
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

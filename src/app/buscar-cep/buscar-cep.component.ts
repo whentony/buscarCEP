@@ -8,7 +8,7 @@ import {ApiService} from '../api.service';
   styleUrls: ['./buscar-cep.component.css']
 })
 export class BuscarCEPComponent implements OnInit {
-
+msgerror = '';
   cep: string;
   endereco: any = {
     logradouro: '',
@@ -30,6 +30,8 @@ export class BuscarCEPComponent implements OnInit {
   }
   buscarCep(cep: string): any {
   //  console.log(this.cep);
+    this.msgerror = '';
+    this.aux =  false;
     this.apiService.Api(cep, 'api/contato/').subscribe(data => {
         // @ts-ignore
         console.log(typeof data.logradouro);
@@ -49,6 +51,7 @@ export class BuscarCEPComponent implements OnInit {
       },
       error => {
         console.log(error);
+        this.msgerror = 'Erro na solicitação de Endereço';
       });
 
 
