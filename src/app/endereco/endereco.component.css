@@ -1,0 +1,12 @@
+.label{
+  font-weight: 500;
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+}
+.text-dark{
+  padding: 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+

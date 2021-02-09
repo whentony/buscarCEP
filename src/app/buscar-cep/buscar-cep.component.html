@@ -1,0 +1,27 @@
+
+
+  <section class="container mt-3">
+    <div class="text-center">
+      <mat-form-field class="example-full-width">
+        <mat-label>CEP:</mat-label>
+        <input type="text" matInput placeholder="Digite seu CEP" mask="00000-000" [(ngModel)]="this.cep">
+
+      </mat-form-field>
+
+    </div>
+    <div class="text-center">
+    <button mat-raised-button color="primary"   (click)="buscarCep(this.cep)">Buscar</button>
+
+    </div>
+
+
+
+
+  <app-endereco [pegarEndereco] = "endereco" *ngIf="this.aux"></app-endereco>
+  <div class="text-center mt-4">
+    <button mat-raised-button color="warn"  *ngIf="this.aux" (click)="limpar()">Limpar Busca</button>
+  </div>
+  </section>
+
+
+
